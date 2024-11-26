@@ -1,11 +1,9 @@
 class Solution {
     public String reverseStr(String s, int k) {
         StringBuilder s1 = new StringBuilder(s);
-        int j;
-        int m;
         for (int i = 0; i < s.length(); i+=2*k){
-            j = i;
-            m = j + k-1;
+            int j = i;
+            int m = j + k-1;
             if (m >= s.length()){
                 while(m >= s.length()){
                     m--;
