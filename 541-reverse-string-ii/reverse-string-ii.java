@@ -4,11 +4,7 @@ class Solution {
         for (int i = 0; i < s.length(); i+=2*k){
             int j = i;
             int m = j + k-1;
-            if (m >= s.length()){
-                while(m >= s.length()){
-                    m--;
-                }
-            }
+            m = Math.min(m, s.length() - 1);
             while (j < m){
                 char temp = s1.charAt(j);
                 s1.setCharAt(j,s1.charAt(m));
